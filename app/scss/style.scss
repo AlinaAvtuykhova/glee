@@ -3,7 +3,94 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 45px 0 50px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo__title {
+  font-size: 36px;
+  line-height: 58px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+&__list-link{
+  transition: all .3s;
+
+ &:hover {
+    color: $accent;
+  }
+}
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link-item {
+    padding: 0 10px;
+  }
+
+  &__link-search {
+    border-radius: 50%;
+    background-color: #edf1f4;
+    padding: 20px 25px;
+  }
+
+
+  &__items {
+    display: flex;
+    background-color: #fcd7b6;
+    border-radius: 100px/50px;
+    padding: 20px 15px 10px;
+    margin: 0 20px;
+  }
+
+  &__link-item {
+    position: relative;
+  }
+
+
+  &__num {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    top: -10px;
+    right: -5px;
+  }
+
+  &__link-icon4 {
+    background-color: #a3bbc8;
+    border-radius: 50%;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
 
 @import 'media';
-
-
