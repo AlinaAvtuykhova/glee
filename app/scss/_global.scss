@@ -3,10 +3,15 @@ body{
   height: 100%;
 }
 body{
-  color: #ffffff;
+  color: #7b7b7b;
   font-size: 16px;
   line-height: 20px;
   @extend %rubik-500;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex-grow: 1;
 }
 
 .container{
@@ -14,7 +19,5 @@ body{
   margin: 0 auto;
   padding: 0 15px;
  }
- a{
-  color: $title;
- }
+ 
  
