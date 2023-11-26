@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "carousel": "^0.0.3",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -17,7 +18,9 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "autoprefixer": "^10.4.16",

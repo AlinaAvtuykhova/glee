@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -114,8 +115,8 @@
   padding: 75px 0 55px;
 
   &__contact {
-    max-width: 205px;
-    margin-right: 100px;
+    max-width: 200px;
+    margin-right: 110px;
   }
 
   &__adress,
@@ -136,21 +137,21 @@
     color: #1f2044;
     font-size: 16px;
     line-height: 21px;
-
   }
 
   &__item-list {
     margin-bottom: 20px;
   }
 
-  /* &__item-form {
-    margin-right: 0;
-  } */
+  &__item-form {
+    margin-right: -30px;
+  }
 
   &__text {
     margin-bottom: 40px;
     @extend %rubik-400;
   }
+
 
   &__form {
     @extend %dmsans_18pt-400;
@@ -194,10 +195,87 @@
   &__item+.footer-bottom__item {
     margin-left: 15px;
   }
-
-
-
 }
+
+.slider {
+  &__inner {
+    position: relative;
+  }
+
+  &__item {
+    background-image: url(../images/slider/slider-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    padding: 225px 0 280px;
+    margin-left: 300px;
+    max-width: 380px;
+  }
+
+  &__title {
+    font-size: 65px;
+    line-height: 70px;
+    color: $title;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $title;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    max-width: 200px;
+    padding: 25px 30px;
+    background-color: $bg;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &-btn {
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    padding-right: 60px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    margin-left: 45%;
+    margin-top: -70px;
+
+    li {
+      padding: 0 10px;
+
+      button {
+        padding: 0;
+        font-size: 11px;
+        background-color: transparent;
+        color: $title;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: none;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 
