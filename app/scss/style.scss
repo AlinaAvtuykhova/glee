@@ -355,9 +355,10 @@
 button.products-btn.mixitup-control-active {
   color: #191919;
 }
+
 button.design-btn.mixitup-control-active {
   color: #191919;
-  
+
 }
 
 
@@ -375,7 +376,7 @@ button.design-btn.mixitup-control-active {
     color: $standart;
     background-color: #fff;
     cursor: pointer;
-      }
+  }
 
   &-btn+.products-btn {
     margin-left: 30px;
@@ -484,28 +485,32 @@ button.design-btn.mixitup-control-active {
   &-btn+.design-btn {
     margin-left: 30px;
   }
-  &__items{
-    display: grid;  
+
+  &__items {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px 30px ;
+    grid-gap: 30px 30px;
   }
 }
 
-.design-item{
+.design-item {
   width: 370px;
-  height:245px; 
+  height: 245px;
   background-repeat: no-repeat;
   background-color: #f8f8f8;
-  &__title{
+
+  &__title {
     color: #191919;
     font-size: 20px;
     line-height: 25px;
   }
-  &__subtitle{
+
+  &__subtitle {
     color: $bg;
   }
-  &__content{
-    padding: 40px;   
+
+  &__content {
+    padding: 40px;
     text-align: start;
     max-width: 255px;
   }
@@ -609,7 +614,110 @@ button.design-btn.mixitup-control-active {
       height: 400px;
     }
   }
+}
 
+.articles {
+  padding-top: 120px;
+
+  &__inner {
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subtitle {
+    line-height: 0;
+    color: #262626;
+    @extend %dmsans_18pt-700;
+    padding-top: 7px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/arrow-view.png);
+      width: 7px;
+      height: 12px;
+      right: -20px;
+      top: 2px;
+    }
+  }
+
+  &__item-imglink {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__item-img {
+    max-width: 370px;
+
+
+
+  }
+
+
+  &__item-inner {
+    background-color: #fef7f0;
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-box {
+    background-color: #fff;
+    padding: 35px 30px;
+    width: 370px;
+  }
+
+  &__item-title {
+    color: #262626;
+    font-size: 18px;
+    @extend %dmsans_24pt-500;
+    margin-bottom: 20px;
+    height: 65px;
+  position: relative;
+  }
+
+  &__item-title::before {
+    content: 'NEWS';
+    color: #fff;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14px;
+    position: absolute;
+    width: 103px;
+    height: 30px;
+    top: -50px;
+    left: 0;
+    background-image: url(../images/articles/articles-news.png)
+  }
+  
+
+
+  &__item-info {
+    @extend %rubik-400;
+    color: #222933;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  &__item-author {
+    margin-left: 30px;
+  }
+
+  &__partners-list {
+    padding: 90px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 
