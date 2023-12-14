@@ -39,3 +39,47 @@ body {
     align-items: center;
   }
 }
+
+.breadcrumbs {
+  padding: 35px 0;
+  background-color: #edf1f4;
+  text-align: center;
+  @extend %rubik-400;
+
+  &__title {
+    color: #222933;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    padding-right: 20px;
+    position: relative;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      width: 10px;
+      height: 12px;
+      right: 5px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: #888c91;
+    font-size: 14px;
+  }
+}
