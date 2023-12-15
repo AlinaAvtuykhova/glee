@@ -83,11 +83,14 @@
 
   &__num {
     position: absolute;
+    color: #243f4d;
+    @extend %dmsans_18pt-400;
     border-radius: 50%;
     background-color: #fff;
     width: 15px;
     height: 15px;
     text-align: center;
+    padding-top: 2px;
     font-size: 10px;
     line-height: 12px;
     top: -8px;
@@ -499,7 +502,7 @@ button.design-btn.mixitup-control-active {
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   /*  grid-gap: 30px 30px; */
+    /*  grid-gap: 30px 30px; */
   }
 }
 
@@ -707,7 +710,6 @@ button.design-btn.mixitup-control-active {
   }
 
 
-
   &__item-info {
     @extend %rubik-400;
     color: #222933;
@@ -728,6 +730,65 @@ button.design-btn.mixitup-control-active {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.modal {
+  padding-top: 120px;
+  margin: 0 auto 120px;
+  max-width: 470px;
+  @extend %rubik-400;
+  color: $title;
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #f6f6f6;
+    padding: 0 15px;
+    margin-top: 15px;
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: $bg;
+    color: #fff;
+    height: 60px;
+    font-size: 18px;
+    @extend %rubik-500;
+    border: none;
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    border-bottom: 1px solid #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__error {
+    color: inherit;
+  }
+
+  &__text {
+    text-align: center;
+    padding: 30px 0 25px;
+  }
+
+  &__btn-create {
+    border: 1px solid $bg;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    font-size: 18px;
+    @extend %rubik-500;
+    color: #243f4d;
+  }
+
 }
 
 
