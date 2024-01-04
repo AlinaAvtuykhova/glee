@@ -72,6 +72,7 @@ body {
 
     &:last-child {
       padding-right: 0;
+
       &::after {
         display: none;
       }
@@ -82,4 +83,31 @@ body {
     color: #888c91;
     font-size: 14px;
   }
+}
+
+.pagination {
+  padding-top: 120px ;
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    margin-right: 15px;
+  }
+
+  &__btn,
+  &__btn-next {
+cursor: pointer;
+    color: #243f4d;
+    @extend %rubik-400;
+    border: 1px solid $bg;
+    padding: 20px 25px;
+    background-color: #fff;
+  }
+
+  &__btn--active {
+    color: #fff;
+    background-color: $bg;
+  }
+
+
 }

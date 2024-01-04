@@ -414,6 +414,7 @@ button.design-btn.mixitup-control-active {
   }
 
   &__images {
+    object-fit: cover;
     bottom: 0;
     right: 0;
     left: 0;
@@ -791,12 +792,144 @@ button.design-btn.mixitup-control-active {
 
 }
 
+.product {
+  padding: 120px 0;
+  color: #243f4d;
 
+  &__inner {
+    display: flex;
+  }
 
+  &__filters {
+    min-width: 275px;
+    margin-right: 30px;
+  }
+}
 
+.filter {
+  &__item {
+    margin-bottom: 55px;
+  }
 
+  &__title {
+    @extend %dmsans_18pt-700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
 
+    &::after {
+      content: '';
+      background-image: url(../images/icons/title-line.png);
+      position: absolute;
+      width: 39px;
+      height: 3px;
+      margin-left: 20px;
+      top: 8px;
+    }
+  }
+}
 
+.filter-category,
+.filter-brand {
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filter-category__checkbox {
+      background-color: #edf1f4;
+    }
+
+    &:checked+.filter-brand__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    @extend %rubik-400;
+  }
+}
+
+.filter-price{
+  &__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    @extend %rubik-400;
+  }
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+.irs--flat .irs-line{
+  background-color: #c2d2db;
+  height:1px;
+  border:1px solid #e3eaee;
+  top:0;
+}
+.irs--flat .irs-bar{
+  background-color: $bg;
+  height:2px;
+  border: 1px solid #bfd0d9;
+  top:0;
+}
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+.irs--flat .irs-handle{
+  width: 15px;
+  height: 15px;
+  background-color: $bg;
+  top:-6px;
+}
+.irs--flat .irs-from,
+.irs-to {
+  display: none;
+}
+.irs--flat {
+  height: 15px;
+}
+
+.filter-recent{
+  &__inner{
+    display: flex;
+    margin-bottom: 23px;
+    cursor: pointer;
+  }
+  &__box-img{
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border: 2px solid #f2f2f2;
+  }
+  &__img{
+    margin: 0 auto;
+  }
+  &__subtitle,
+  &__price{
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+    @extend %rubik-400;
+  }
+  &__star{
+    padding: 13px 0;
+  }
+}
+.product-content__inner{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .products-item {
+      min-width: 270px;
+  }
+}
 
 
 
