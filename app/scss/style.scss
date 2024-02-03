@@ -1388,4 +1388,287 @@ button.design-btn.mixitup-control-active {
   }
 }
 
+.blog-one {
+  &__text {
+    padding: 40px 0 65px;
+    border-bottom: 1px solid #ebebeb;
+
+    h4 {
+      color: #333333;
+      font-size: 36px;
+      @extend %rubik-400;
+      margin-bottom: 30px;
+    }
+
+    h5 {
+      font-size: 18px;
+      color: #243f4d;
+      @extend %rubik-500;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #243f4d;
+      line-height: 30px;
+      @extend %rubik-400;
+    }
+
+    blockquote {
+      color: #243f4d;
+      line-height: 30px;
+      @extend %rubik-400;
+      padding: 25px 35px;
+      margin: 45px 0;
+      background-color: #edf1f4;
+      border-left: 6px solid $bg;
+
+      span {
+        display: block;
+        padding-left: 45px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $bg;
+          width: 22px;
+          height: 3px;
+          left: 0;
+          top: 13px;
+        }
+      }
+    }
+
+    .blog-one__box-img {
+      display: flex;
+      margin-bottom: 45px;
+    }
+
+    .blog-one__text-img {
+      padding-top: 25px;
+    }
+
+    .blog-one__left-img {
+      width: 323px;
+      height: 210px;
+      object-fit: cover;
+      margin-right: 30px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  &__author {
+    min-width: 280px;
+
+    span {
+      line-height: 30px;
+    }
+  }
+
+  &__author-img {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    float: left;
+    margin-right: 30px;
+  }
+
+  &__author-title {
+    color: #333333;
+    font-size: 18px;
+    @extend %rubik-500;
+    line-height: 25px;
+    padding-top: 10px;
+  }
+
+  &__info {
+    min-width: 220px;
+  }
+
+  &__info-tags,
+  &__info-share {
+    line-height: 26px;
+    color: #333333;
+    @extend %rubik-400;
+
+  }
+
+  &__info-tags {
+    margin: 10px 0;
+
+    a {
+      margin-left: 18px;
+      color: #a1a1a1;
+    }
+  }
+
+  &__info-share {
+    img {
+      display: inline-block;
+      margin-left: 18px;
+    }
+  }
+}
+
+.comments {
+  padding-top: 70px;
+  margin-bottom: 60px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+    color: #436372;
+    @extend %rubik-700;
+    margin-bottom: 50px;
+  }
+
+  &__item--right {
+    margin-left: 135px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__item+.comments__item {
+    padding-top: 30px;
+  }
+
+  &__item-inner {
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  &__item-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-img {
+    display: inline-block;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    @extend %rubik-700;
+    color: #436372;
+    margin-bottom: 30px;
+  }
+
+  &__item-date {
+    color: #9e9e9e;
+    font-size: 14px;
+    @extend %rubik-400;
+  }
+
+  &__item-comment {
+    color: #565872;
+    @extend %rubik-400;
+    margin-bottom: 25px;
+  }
+
+  &__item-reply {
+    color: #516278;
+    font-size: 14px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/arrow-right-reply.svg);
+      width: 13px;
+      height: 15px;
+      top: 0;
+      left: 44px;
+    }
+  }
+}
+
+.comments-form {
+  &__box-input {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    padding: 15px 20px;
+    width: 100%;
+
+    &+.comments-form__input {
+      margin-left: 30px;
+    }
+  }
+
+  &__box-input {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-image: url(../images/icons/user.png);
+      top: 17px;
+      left: 360px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 13px;
+      background-image: url(../images/icons/message.png);
+      top: 18px;
+      right: 20px;
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 15px;
+      background-image: url(../images/icons/comment.png);
+      top: -130px;
+      right: 19px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px 20px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 40px;
+    resize: none;
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 21px;
+    @extend %rubik-400;
+    padding: 20px 35px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $bg;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
 @import 'media';
