@@ -1670,5 +1670,119 @@ button.design-btn.mixitup-control-active {
   }
 }
 
+.contact {
+  padding-top: 120px;
+  text-align: center;
+
+  &__text {
+    @extend %rubik-400;
+    color: $bg;
+    line-height: 20px;
+  }
+
+  &__title {
+    font-size: 35px;
+    line-height: 57px;
+    @extend %dmsans_18pt-700;
+    color: $title;
+    margin-bottom: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 370px;
+    height: 380px;
+    background-color: #fbfbfb;
+    padding: 70px 55px 80px;
+    transition: all .2s;
+
+    &:hover {
+      border: 3px solid $bg;
+
+      .contact__item-img {
+        background-color: $bg;
+
+        svg {
+          path {
+            fill: #ffff;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__item-title {
+    margin: 60px 0 20px;
+    @extend %dmsans_18pt-700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+  }
+
+  &__item-text {
+    color: #565872;
+    line-height: 30px;
+    @extend %rubik-400;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+
+  &__form {
+    display: flex;
+    padding-top: 115px;
+  }
+
+  &-form {
+    width: 630px;
+
+    input,
+    textarea {
+      background-color: #fafafa;
+      border: none;
+
+      &::placeholder {
+        color: #565872;
+      }
+    }
+
+    textarea {
+      height: 170px;
+      margin-bottom: 20px;
+    }
+
+    .comments-form__label::before {
+      top: -160px;
+    }
+
+    .comments-form__box-input::before {
+      left: 267px;
+    }
+
+  }
+
+  &-form__btn {
+    display: block;
+    text-align: start;
+    border-radius: 10px;
+  }
+
+  .map {
+    margin-left: 55px;
+  }
+}
+
 
 @import 'media';
