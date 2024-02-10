@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>glee</title>
+  <link rel="stylesheet" href="css/login.min.css">
+</head>
+
+<body>
+   {% include 'app/module/_header/_header.html'%}
+
+  <main>
+    <section class="breadcrumbs">
+      <div class="container">
+        <h2 class="breadcrumbs__title">Log In</h2>
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Log in
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="modal">
+      <div class="container">
+        <form class="modal__form" action="#">
+          <label class="modal__label">
+            Username or email adress*
+            <input class="modal__input" type="text" required>
+          </label>
+          <label class="modal__label" >
+            Password*
+            <input class="modal__input" type="text" required>
+          </label>
+          <button class="modal__btn" type="submit">
+            Login
+          </button>
+          <div class="modal__inner">
+            <label class="modal__label">
+              <input type="checkbox">
+              Remember me
+            </label>
+            <a class="modal__error" href="#">
+              Lost your password?
+            </a>
+          </div>
+          <p class="modal__text">
+            No registered? No problem
+          </p>
+          <button class="modal__btn-create" type="submit">
+            Create an account
+          </button>
+        </form>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+  
+ {% include 'app/module/_partners/_partners.html' %}
+ {% include 'app/module/_footer/_footer.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

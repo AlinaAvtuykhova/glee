@@ -1,0 +1,100 @@
+.header {
+  padding: 45px 0 50px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+}
+
+.logo__title {
+  font-size: 36px;
+  line-height: 40px;
+  color: $title;
+  margin-left: 10px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-link {
+    transition: all .3s;
+    color: $title;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link-item {
+    padding: 0 30px;
+  }
+
+  &__link-search {
+    border-radius: 50%;
+    background-color: #edf1f4;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__link-img {
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/icons/pink-ellipse.png);
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 55px;
+    margin: 0 25px;
+  }
+
+  &__link-item {
+    position: relative;
+  }
+
+
+  &__num {
+    position: absolute;
+    color: #243f4d;
+    @extend %dmsans_18pt-400;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 10px;
+    line-height: 12px;
+    top: -8px;
+    right: 20px;
+  }
+
+  &__link-icon4 {
+    background-color: #a3bbc8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+}

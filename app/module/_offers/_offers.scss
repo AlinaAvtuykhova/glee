@@ -1,0 +1,68 @@
+.offers {
+
+  &__inner {
+    background-color: #fef7f0;
+  }
+
+  &__items {
+    padding: 45px 0;
+    margin: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+  }
+
+  .support {
+    max-width: 200px;
+  }
+
+  .payment {
+    max-width: 210px;
+  }
+
+  .support::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/support.png);
+    left: -75px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .delivery::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/delivery.png);
+    left: -70px;
+    width: 50px;
+    height: 30px;
+  }
+
+  .payment::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/payment.png);
+    left: -85px;
+    width: 50px;
+    height: 45px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    line-height: 20px;
+    @extend %dmsans_18pt-700;
+    color: #414141;
+    margin-bottom: 15px;
+  }
+
+  &__item-text {
+    color: #585858;
+    line-height: 25px;
+    @extend %dmsans_18pt-400;
+  }
+}
