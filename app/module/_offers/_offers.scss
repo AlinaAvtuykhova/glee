@@ -47,7 +47,7 @@
     content: '';
     position: absolute;
     background-image: url(../images/icons/payment.png);
-    left: -85px;
+    left: -70px;
     width: 50px;
     height: 45px;
   }
@@ -66,3 +66,30 @@
     @extend %dmsans_18pt-400;
   }
 }
+
+@media(max-width:1200px) {
+  .offers {
+    &__items {
+      justify-content: space-around;
+      margin: 0 70px;
+    }
+  }
+}
+
+@media(max-width:1000px) {
+  .offers {
+    &__items {
+      display: block;
+      margin: 0 10px 0 90px;
+    }
+
+    .support,
+    .payment,
+    .delivery {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+  

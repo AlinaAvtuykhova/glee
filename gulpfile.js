@@ -18,8 +18,8 @@ function browsersync() {
     },
     notify: false
   })
-
 }
+
 function nunjucks(){
   return src('app/*.njk')
     .pipe(nunjucksRender())
@@ -30,7 +30,7 @@ function nunjucks(){
 function styles() {
   return src('app/scss/*.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
-    /* .pipe(concat('style.min.css')) */
+    /* .pipe(concat('')) */
     .pipe(rename({
       suffix : '.min'
     }))
@@ -78,7 +78,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app//**/*.scss'], styles);
+  watch(['app/**/*.scss'], styles);
   watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
   watch(['app/**/*.html']).on('change', browserSync.reload)

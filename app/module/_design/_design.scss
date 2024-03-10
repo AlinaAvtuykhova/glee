@@ -47,3 +47,37 @@
     max-width: 255px;
   }
 }
+
+@media(max-width: 1200px) {
+  .design__top {
+    padding: 30px 0 40px;
+  }
+
+  .design__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .design-item {
+    width: 100%;
+  }
+}
+
+@media(max-width:750px) {
+  .design-btn+.design-btn {
+    margin-left: 5px;
+  }
+
+  .design {
+    padding-bottom: 0;
+  }
+
+  .design__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .design-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

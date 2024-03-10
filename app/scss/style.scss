@@ -65,10 +65,13 @@
 
 }
 
+
 .product {
   padding: 120px 0;
   color: #243f4d;
-
+&__btn{
+  display: none;
+}
   &__inner {
     display: flex;
   }
@@ -91,6 +94,7 @@
     text-transform: uppercase;
     margin-bottom: 30px;
     position: relative;
+    padding-left: 10px;
 
     &::after {
       content: '';
@@ -236,6 +240,7 @@
   &-content__title {
     color: #333333;
     font-size: 40px;
+    line-height: 44px;
     @extend %rubik-400;
     margin-bottom: 23px;
   }
@@ -556,6 +561,7 @@
   }
 
   &__item-title {
+    line-height: 40px;
     color: #333;
     font-size: 36px;
     @extend %rubik-400;
@@ -591,6 +597,7 @@
 
 .blog-aside {
   &__search {
+    display: flex;
     margin-bottom: 60px;
 
   }
@@ -607,9 +614,7 @@
     cursor: pointer;
     background-color: #edf1f4;
     width: 50px;
-    height: 41px;
     border: none;
-    margin-left: -6px;
     border-radius: 5px;
   }
 
@@ -669,6 +674,7 @@
     h4 {
       color: #333333;
       font-size: 36px;
+      line-height: 40px;
       @extend %rubik-400;
       margin-bottom: 30px;
     }

@@ -51,7 +51,7 @@ button.design-btn.mixitup-control-active {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 25px 20px;
+    margin: 0 auto;
     display: inline-block;
     position: absolute;
   }
@@ -110,5 +110,57 @@ button.design-btn.mixitup-control-active {
 
     background-color: rgb(163, 187, 200);
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+}
+
+@media(max-width:1000px) {
+  .products {
+    &__top {
+      padding: 40px 0 40px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media(max-width:750px) {
+  .products {
+    padding-top: 35px;
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media(max-width:600px) {
+  .products {
+    &__top {
+      padding: 25px 0 25px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+      max-width: 100%;
+    }
+
+    /* &-item__images {
+      left: 23%;
+    } */
+  }
+
+  .products-btn+.products-btn {
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:450px) {
+  .products-item__images {
+    left: 10%;
   }
 }

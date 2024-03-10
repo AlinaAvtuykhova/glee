@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 27px;
   }
 
   &__subtitle {
@@ -26,32 +27,25 @@
     }
   }
 
-  &__item-imglink {
+
+  &__items {
     display: flex;
     justify-content: space-between;
-
-  }
-
-  &__item-img {
-    max-width: 370px;
-  }
-
-  &__item-inner {
     background-color: #fef7f0;
   }
 
-  &__item-content {
-    display: flex;
-    justify-content: space-between;
+
+
+  &__item-box+.articles__item-box {
+    margin-left: 20px;
   }
 
   &__item-box {
-    background-color: #fff;
-    padding: 35px 30px;
     width: 370px;
   }
 
   &__item-title {
+    padding: 10px 0;
     color: #262626;
     font-size: 18px;
     @extend %dmsans_24pt-500;
@@ -69,7 +63,7 @@
     position: absolute;
     width: 103px;
     height: 30px;
-    top: -50px;
+    top: -33px;
     left: 0;
     background-image: url(../images/articles/articles-news.png)
   }
@@ -89,10 +83,79 @@
     margin-left: 30px;
   }
 
-  &__partners-list {
-    padding: 90px 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+@media(max-width:1200px) {
+  .articles {
+    &__items {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media(max-width:900px) {
+  .articles {
+    &__items {
+      display: block;
+    }
+
+    &__item-box {
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    &__item-box+.articles__item-box {
+      margin-left: 0;
+    }
+
+    &__item-title {
+      margin-bottom: 0;
+    }
+
+    &__item-img {
+      object-fit: cover;
+      height: 370px;
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width:600px) {
+  .articles {
+    &__inner {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle::after {
+      top: 11px;
+    }
+
+    &__item-img {
+      height: 300px;
+
+    }
+  }
+}
+
+@media(max-width:450px) {
+  .articles {
+   padding-top: 60px;
+  
+    &__item-img {
+      height: 250px;
+    }
+  }
+}
+
+@media(max-width:450px) {
+  .articles {
+    &__item-title {
+      margin-bottom: 10px;
+    }
+
+    &__item-img {
+      height: 200px;
+    }
   }
 }
