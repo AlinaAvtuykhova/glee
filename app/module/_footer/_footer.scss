@@ -1,0 +1,173 @@
+.footer {
+
+  a {
+    color: $standart;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @extend %rubik-400;
+
+
+  &__logo {
+    margin-bottom: 30px;
+    margin-top: -15px;
+    @extend %rubik-500;
+  }
+}
+
+.footer-top {
+  display: flex;
+  padding: 75px 0 55px;
+
+  &__contact {
+    width: 200px;
+    margin-right: 110px;
+  }
+
+  &__adress,
+  &__phone,
+  &__email {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+    width: 160px;
+    margin-right: 150px;
+  }
+
+  &__item-title {
+    margin-bottom: 30px;
+    @extend %dmsans_18pt-700;
+    color: #1f2044;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__item-list {
+    margin-bottom: 20px;
+  }
+
+  &__item-form {
+    margin-right: -30px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    @extend %rubik-400;
+  }
+
+
+  &__form {
+    @extend %dmsans_18pt-400;
+  }
+
+  &__form-input {
+    background-color: #fef7f0;
+    max-width: 170px;
+    width: 100%;
+    border: none;
+    padding: 15px;
+
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+    }
+  }
+
+  &__form-button {
+    line-height: 21px;
+    border: none;
+    padding: 15px 20px;
+    background-color: #a3bbc8;
+    color: #fff;
+    cursor: pointer;
+  }
+
+}
+
+.footer-bottom {
+  padding: 40px 0;
+  border-top: 1px solid #dae4e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__nav {
+    display: flex;
+  }
+
+  &__item+.footer-bottom__item {
+    margin-left: 15px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .footer-top {
+    flex-wrap: wrap;
+
+    &__item-form {
+      max-width: 100%;
+      margin-top: 30px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media(max-width:750px) {
+  .footer-top__nav {
+    margin-right: 0;
+  }
+
+  .footer-top__item-form {
+    margin-left: 15px;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+    justify-content: center;
+
+    &__copy {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width:620px) {
+  .footer-top__item-form {
+    margin-left: 0;
+  }
+
+  .footer-top__contact {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+
+@media(max-width:450px) {
+  .footer-top {
+    &__item-menu {
+      display: none;
+    }
+    &__item-title{
+      cursor: pointer;
+    }
+
+    &__item-form {
+      margin-top: 10px;
+    }
+
+    &__form-input {
+      max-width: 100%;
+    }
+
+    &__form-button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.slider {
+  &__inner {
+    position: relative;
+  }
+
+  &__item {
+    background-image: url(../images/slider/slider-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1770px;
+    height: 100%;
+  }
+
+  &__content {
+    padding: 225px 0 280px;
+    margin-left: 300px;
+    max-width: 380px;
+  }
+
+  &__title {
+    font-size: 65px;
+    line-height: 70px;
+    color: $title;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $title;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    max-width: 200px;
+    padding: 25px 30px;
+    background-color: $bg;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &-btn {
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    padding-right: 60px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    margin-left: 40%;
+    margin-top: -70px;
+
+    li {
+      padding: 0 10px;
+
+      button {
+        padding: 0;
+        font-size: 11px;
+        background-color: transparent;
+        color: $title;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: none;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1400px) {
+  .slider__item {
+    background-position: center center;
+    height: 800px;
+  }
+
+  .slider__content {
+    margin-left: 45px;
+  }
+}
+
+@media(max-width:1000px) {
+  .header {
+    padding: 35px 0 35px;
+  }
+
+  .slider {
+    &__item {
+      height: 600px;
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 55px;
+      margin-bottom: 25px;
+    }
+
+    &__content {
+      padding-top: 160px;
+      max-width: 300px;
+    }
+  }
+}
+
+@media(max-width:750px) {
+  .slider {
+    &__item {
+      background-image: none;
+      background-color: $accent;
+
+    }
+
+    &__content {
+      max-width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    &__link {
+      margin: 0 auto;
+    }
+  }
+
+  .slick-dots {
+    margin-left: 40%;
+  }
+}
+
+@media(max-width:450px) {
+  .slider__content {
+    padding: 80px 10px 80px;
+    max-width: 300px;
+
+  }
+
+  .slider__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .slider__item {
+    height: 500px;
+  }
+}
